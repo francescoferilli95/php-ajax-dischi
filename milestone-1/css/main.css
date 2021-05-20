@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #182d3d;
+}
+
+.header {
+    content: '';
+    position: relative;
+    background: #132431;
+    height: 100px;
+}
+
+.img {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    width: 60px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
