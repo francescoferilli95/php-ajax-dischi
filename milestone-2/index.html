@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Dischi VUE - PHP</title>
+</head>
+<body>
+    
+    <div id="app">
+
+        <header class="header">
+            <a href="./"><img class="img" :src="logo" alt="Site Brand Img"></a>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="box" v-for="(disc, index) in discs">
+                    <img :src="disc.poster" alt="Album Poster Img">
+                    <h3>{{disc.title}}</h3>
+                    <h4>{{disc.author}}</h4>
+                    <h3>{{disc.year}}</h3>
+                    <h4>{{disc.genre}}</h4>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+
+    <!-- JS -->
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
