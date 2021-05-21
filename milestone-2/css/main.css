@@ -10,18 +10,33 @@ body {
 }
 
 .header {
-    content: '';
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #132431;
     height: 80px;
+    padding: 0 20px;
 }
 
 .img {
-    position: absolute;
-    top: 50%;
-    left: 300px;
-    transform: translateY(-50%);
     width: 60px;
+}
+
+.header label {
+    color: #fff;
+    margin-right: 20px;
+}
+
+.src {
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.sel {
+    border-radius: 10px;
+    outline: none;
 }
 
 .container {
@@ -43,6 +58,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    color: #fff;
 }
 
 .box img {

@@ -18,11 +18,28 @@
     <div id="app">
 
         <header class="header">
-            <a href="./"><img class="img" :src="logo" alt="Site Brand Img"></a>
+            <div class="image">
+                <a href="./"><img class="img" :src="logo" alt="Site Brand Img"></a>
+            </div>
+            <div class="search">
+                <label for="Search Discs">Search Discs by Author</label>
+                <input class="src" v-model.trim="searchString" type="text" placeholder="Search Author" @keyup="searchAuthor">
+            </div>
+            <div class="select">
+                <label for="artist-select">Filter by genre</label>
+                <select class="sel" name="artist" id="artist-select" v-model="selected" @change="getAlbumArtist">
+                    <option v-for="artist in artists" :value="artist">
+                        {{ artist }}
+                    </option>
+                </select>
+            </div>
         </header>
 
         <main>
-            <div class="container">
+            <div v-if="discs.length === 0" class="container">
+                <h1>No Results for your research...</h1>
+            </div>
+            <div v-else class="container">
                 <div class="box" v-for="(disc, index) in discs">
                     <img :src="disc.poster" alt="Album Poster Img">
                     <h3>{{disc.title}}</h3>
